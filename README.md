@@ -1,4 +1,4 @@
-# CarRentalSystem-Microservers Project
+# Car Rental System - Microservers Project
 Implementation of Identity Provider with OpenID Connect
 
 # Programmed by Sohaibssb for Distributed information processing systems Course at Bauman University-Moscow, start 6/4/2023

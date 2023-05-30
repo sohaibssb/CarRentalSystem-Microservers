@@ -27,6 +27,18 @@ def create_tables():
         availability=True
     )
 
+    CarsModel.get_or_create(
+        id=2,
+        car_uid="2b251ea7-3c22-4a78-b56c-4fbf4fe9a8b2",
+        brand="BMW",
+        model="X5",
+        registration_number="ABC123",
+        power=300,
+        type="SUV",
+        price=5000,
+        availability=True
+    )
+
 if __name__ == '__main__':
     database = 'database.db'
 

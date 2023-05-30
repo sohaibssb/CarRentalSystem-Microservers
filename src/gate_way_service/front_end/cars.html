@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car List</title>
+    <link rel="stylesheet" href="carstyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="car-list">
+            <h1>Car List</h1>
+            {% for car in cars_data %}
+                <div class="car-item">
+                    <h2>{{ car['brand'] }} {{ car['model'] }}</h2>
+                    <p>Registration Number: {{ car['registrationNumber'] }}</p>
+                    <p>Power: {{ car['power'] }} HP</p>
+                    <p>Type: {{ car['type'] }}</p>
+                    <p>Price: ${{ car['price'] }}</p>
+                    <p>Availability: {% if car['available'] %}Available{% else %}Not Available{% endif %}</p>
+                    <button class="select-button" onclick="redirectToSelect('{{ car['carUid'] }}')">Select</button>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="login-section">
+            <h2>Login</h2>
+            <button class="login-button" onclick="redirectToLogin()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToSelect(carUid) {
+            // Replace "example.com/select" with your actual select URL
+            var redirectUrl = "http://example.com/select?carUid=" + carUid;
+            window.location.href = redirectUrl;
+        }
+
+        function redirectToLogin() {
+            // Replace "example.com/login" with your actual login URL
+            window.location.href = "http://example.com/login";
+        }
+    </script>
+</body>
+</html>
